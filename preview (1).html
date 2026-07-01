@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programa de Partners JUSTECORP S.A. | Inversión inmobiliaria en Panamá</title>
+  <meta name="description" content="Programa de partners de JUSTECORP S.A. para inmobiliarias, personal shoppers y asesores con clientes inversores interesados en inversión inmobiliaria en Panamá." />
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --navy: #0f2742;
+      --blue: #1f6feb;
+      --blue-dark: #1555b5;
+      --gold: #c79a3b;
+      --text: #1f2937;
+      --muted: #657083;
+      --white: #ffffff;
+      --line: #dbe3ee;
+      --card: #ffffff;
+      --shadow: 0 18px 45px rgba(15, 39, 66, .10);
+      --radius: 20px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      background: var(--navy);
+      color: var(--white);
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 8px 30px rgba(0,0,0,.12);
+    }
+    .topbar-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand {
+      font-weight: 800;
+      letter-spacing: .04em;
+      font-size: 18px;
+    }
+    .nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      font-size: 14px;
+    }
+    .nav a {
+      text-decoration: none;
+      opacity: .9;
+    }
+    .nav a:hover { opacity: 1; }
+    .nav .mini-cta {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 9px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(15,39,66,.96), rgba(15,39,66,.78)),
+        radial-gradient(circle at 15% 20%, rgba(199,154,59,.22), transparent 30%),
+        radial-gradient(circle at 85% 10%, rgba(31,111,235,.35), transparent 28%);
+      color: white;
+      padding: 86px 24px 72px;
+    }
+    .hero-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 46px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #ffe1a1;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0 0 22px;
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 1.04;
+      letter-spacing: -.035em;
+    }
+    .hero p {
+      font-size: 20px;
+      color: rgba(255,255,255,.86);
+      margin: 0 0 30px;
+      max-width: 740px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: transform .15s ease, background .15s ease, border .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--gold); color: var(--navy); }
+    .btn-secondary { border-color: rgba(255,255,255,.35); color: white; }
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+      max-width: 780px;
+    }
+    .trust-chip {
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: 14px;
+      color: rgba(255,255,255,.88);
+    }
+    .hero-card {
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 26px;
+      padding: 28px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 30px 80px rgba(0,0,0,.18);
+    }
+    .hero-card h3 { margin: 0 0 18px; font-size: 22px; }
+    .hero-card ul { margin: 0; padding-left: 20px; color: rgba(255,255,255,.88); }
+    .hero-card li { margin-bottom: 10px; }
+
+    section { padding: 72px 24px; }
+    .container { max-width: 1160px; margin: 0 auto; }
+    .section-head { max-width: 780px; margin-bottom: 34px; }
+    .section-label {
+      color: var(--blue);
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    h2 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: clamp(28px, 3vw, 42px);
+      line-height: 1.12;
+      letter-spacing: -.025em;
+    }
+    .lead { color: var(--muted); font-size: 18px; margin: 0; }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 21px;
+    }
+    .card p { margin: 0; color: var(--muted); }
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: #eaf2ff;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .band {
+      background: var(--navy);
+      color: white;
+    }
+    .band h2 { color: white; }
+    .band .lead { color: rgba(255,255,255,.76); }
+    .band .card {
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.15);
+      color: white;
+      box-shadow: none;
+    }
+    .band .card h3 { color: white; }
+    .band .card p { color: rgba(255,255,255,.76); }
+
+    .steps {
+      counter-reset: step;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .step {
+      position: relative;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    .step:before {
+      counter-increment: step;
+      content: counter(step);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: white;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+    .step h3 { margin: 0 0 8px; color: var(--navy); }
+    .step p { margin: 0; color: var(--muted); }
+
+    .highlight {
+      background: linear-gradient(135deg, #ffffff, #eef5ff);
+      border: 1px solid #cfe0f6;
+      border-radius: 28px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+    .highlight strong { color: var(--navy); }
+    .highlight .big-number {
+      font-size: clamp(54px, 8vw, 96px);
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+      letter-spacing: -.06em;
+    }
+
+    .faq { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    details {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 20px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--navy);
+    }
+    details p { color: var(--muted); margin: 12px 0 0; }
+
+    .cta {
+      background: linear-gradient(135deg, var(--blue), var(--navy));
+      color: white;
+      text-align: center;
+      padding: 72px 24px;
+    }
+    .cta h2 { color: white; }
+    .cta p { color: rgba(255,255,255,.82); max-width: 760px; margin: 0 auto 28px; font-size: 18px; }
+
+    footer {
+      background: #071727;
+      color: rgba(255,255,255,.75);
+      padding: 30px 24px;
+      font-size: 14px;
+    }
+    footer .footer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+      background: #fff8e8;
+      border: 1px solid #f2d698;
+      border-radius: 16px;
+      padding: 16px 18px;
+      margin-top: 22px;
+    }
+
+    @media (max-width: 900px) {
+      .nav { display: none; }
+      .hero-inner, .grid-3, .grid-2, .steps, .highlight, .faq { grid-template-columns: 1fr; }
+      .trust-row { grid-template-columns: 1fr; }
+      .hero { padding-top: 58px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">JUSTECORP S.A.</div>
+      <nav class="nav">
+        <a href="#oportunidad">Oportunidad</a>
+        <a href="#partners">Partners</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#faq">FAQ</a>
+        <a class="mini-cta" href="#contacto">Agendar llamada</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Programa de partners en España</div>
+          <h1>Inversión inmobiliaria en Panamá para clientes españoles</h1>
+          <p>Una oportunidad internacional, en USD, con gestión local llave en mano y colaboración remunerada para inmobiliarias, personal shoppers, asesores patrimoniales y consultores con clientes inversores.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contacto">Agendar videoconferencia</a>
+            <a class="btn btn-secondary" href="#partners">Ver cómo funciona</a>
+          </div>
+          <div class="trust-row">
+            <div class="trust-chip">Central operativa en Panamá</div>
+            <div class="trust-chip">Modelo llave en mano</div>
+            <div class="trust-chip">Fee para partners</div>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <h3>Para profesionales con clientes inversores</h3>
+          <ul>
+            <li>Inmobiliarias con línea de inversión.</li>
+            <li>Personal shoppers inmobiliarios.</li>
+            <li>Asesores financieros y patrimoniales.</li>
+            <li>Consultores de rentabilidad inmobiliaria.</li>
+            <li>Agencias premium o de alto valor.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="oportunidad">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">La oportunidad</div>
+          <h2>Panamá como alternativa de diversificación internacional</h2>
+          <p class="lead">JUSTECORP S.A. trabaja con oportunidades inmobiliarias en Panamá para clientes que buscan diversificación fuera de España, exposición al dólar estadounidense y activos con potencial de generación de rentas.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon">USD</div>
+            <h3>Exposición en dólares</h3>
+            <p>Panamá utiliza el dólar estadounidense en su actividad económica diaria, lo que permite al inversor diversificar también en divisa.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🏢</div>
+            <h3>Activo inmobiliario tangible</h3>
+            <p>El cliente accede a un bien real, comprensible y con una estrategia de puesta en rentabilidad.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🌎</div>
+            <h3>Diversificación geográfica</h3>
+            <p>Una alternativa para inversores que no quieren concentrar todo su patrimonio inmobiliario en España.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Modelo llave en mano</div>
+          <h2>Gestión local desde Panamá</h2>
+          <p class="lead">Uno de los principales frenos al invertir fuera es la gestión. Por eso el modelo se apoya en una estructura local que acompaña el proceso y puede encargarse de la operativa posterior.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Videoconferencia con Panamá</h3>
+            <p>Organizamos una reunión directa con el equipo local para validar el proceso, las zonas, los activos y la gestión.</p>
+          </div>
+          <div class="card">
+            <h3>Proceso de compra acompañado</h3>
+            <p>Coordinación documental, explicación de pasos, seguimiento operativo y comunicación con las partes implicadas.</p>
+          </div>
+          <div class="card">
+            <h3>Puesta en rentabilidad</h3>
+            <p>Apoyo local para preparar el activo, buscar alquiler y dar seguimiento a la gestión posterior.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="partners">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Colaboración</div>
+          <h2>Cómo funciona el programa de partners</h2>
+          <p class="lead">La colaboración está diseñada para ser sencilla: el partner presenta al cliente cualificado y JUSTECORP S.A. asume la explicación, coordinación y seguimiento de la operación.</p>
+        </div>
+        <div class="highlight">
+          <div>
+            <div class="big-number">1,5%</div>
+            <h3>Referencia de remuneración para inmobiliarias y personal shoppers</h3>
+            <p>Si el cliente presentado por el partner formaliza una operación, el partner recibe una remuneración por la colaboración. Para inmobiliarias, agencias y personal shoppers, la referencia habitual es el <strong>1,5% del importe de venta</strong>.</p>
+          </div>
+          <div>
+            <h3>Adaptable a otros perfiles profesionales</h3>
+            <p>En el caso de asesorías financieras, consultores patrimoniales o firmas con requisitos internos específicos, se puede valorar un formato de colaboración compatible con su actividad profesional.</p>
+            <p><strong>Tu función:</strong> presentar al cliente interesado. <br><strong>Nuestra función:</strong> gestionar la explicación, la coordinación en Panamá y el seguimiento hasta el cierre.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Paso a paso</div>
+          <h2>Proceso de colaboración</h2>
+          <p class="lead">Un flujo claro para validar la oportunidad antes de presentarla a tus clientes.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><h3>Reunión inicial</h3><p>Llamada de 10–15 minutos para explicar el modelo y entender qué tipo de clientes tienes.</p></div>
+          <div class="step"><h3>Videoconferencia con Panamá</h3><p>Reunión con el equipo local para validar la oportunidad y resolver dudas operativas.</p></div>
+          <div class="step"><h3>Materiales</h3><p>Envío de dossier, resumen ejecutivo, argumentario y preguntas frecuentes.</p></div>
+          <div class="step"><h3>Presentación del cliente</h3><p>Cuando detectes un cliente interesado, haces la presentación formal a JUSTECORP S.A.</p></div>
+          <div class="step"><h3>Reunión con el inversor</h3><p>Explicamos la oportunidad, presentamos escenarios y resolvemos dudas con el cliente.</p></div>
+          <div class="step"><h3>Cierre y remuneración</h3><p>Si el cliente formaliza una operación, se activa la remuneración acordada con el partner.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Cliente ideal</div>
+          <h2>Qué tipo de inversor encaja</h2>
+          <p class="lead">No buscamos perfiles especulativos ni promesas de rentabilidad irreal. Buscamos clientes que valoren una oportunidad internacional seria, explicada con transparencia y gestionada profesionalmente.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card"><h3>Perfil adecuado</h3><p>Clientes con capacidad de inversión, interés en activos reales, visión patrimonial, apertura a oportunidades internacionales y voluntad de analizar documentación, fiscalidad y riesgos.</p></div>
+          <div class="card"><h3>Posible residencia panameña</h3><p>Para determinados perfiles, puede estudiarse una vía de residencia panameña, siempre sujeta a requisitos vigentes, caso concreto y asesoramiento legal correspondiente.</p></div>
+        </div>
+        <div class="note">Aviso: la inversión no debe presentarse como rentabilidad garantizada. Toda operación inmobiliaria está sujeta a riesgos de mercado, ocupación, costes, fiscalidad y cambios regulatorios.</div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Preguntas frecuentes</div>
+          <h2>Dudas habituales de partners</h2>
+        </div>
+        <div class="faq">
+          <details><summary>¿El partner tiene que vender el inmueble?</summary><p>No. El partner presenta al cliente interesado. JUSTECORP S.A. se encarga de explicar la oportunidad, coordinar el proceso y dar seguimiento.</p></details>
+          <details><summary>¿Cuánto cobra el partner?</summary><p>Para inmobiliarias, agencias y personal shoppers, la referencia es el 1,5% del importe de venta si la operación se cierra. Otros perfiles pueden requerir un modelo adaptado.</p></details>
+          <details><summary>¿El cliente puede hablar con el equipo de Panamá?</summary><p>Sí. De hecho, lo recomendamos. La videoconferencia con Panamá permite validar la operativa directamente con el equipo local.</p></details>
+          <details><summary>¿La inversión garantiza rentabilidad?</summary><p>No. Se trabaja con escenarios y gestión profesional, pero no se garantizan rentabilidades futuras.</p></details>
+          <details><summary>¿El partner necesita conocer Panamá?</summary><p>No. JUSTECORP S.A. facilita el dossier, la explicación y la reunión con el equipo local.</p></details>
+          <details><summary>¿Hay exclusividad territorial?</summary><p>Puede valorarse caso por caso para partners estratégicos con capacidad real de generación de clientes.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contacto">
+      <div class="container">
+        <h2>Solicita una reunión de validación</h2>
+        <p>Si trabajas con clientes inversores y quieres conocer el programa de partners de JUSTECORP S.A., podemos organizar una videoconferencia de 20 minutos para revisar el modelo, el perfil de cliente y la colaboración.</p>
+        <a class="btn btn-primary" href="mailto:[EMAIL]?subject=Reunión%20Programa%20de%20Partners%20JUSTECORP%20S.A.">Solicitar reunión</a>
+        <p style="margin-top:18px;font-size:15px;">También puedes escribir por WhatsApp: <strong>[TELÉFONO]</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><strong>JUSTECORP S.A.</strong> · Central operativa en Panamá</div>
+      <div>Contacto: Jesús Lorda · [EMAIL] · [TELÉFONO] · [WEB]</div>
+    </div>
+    <div class="footer-inner" style="margin-top:18px; font-size:12px; color:rgba(255,255,255,.55);">
+      <div>La información presentada tiene carácter comercial e informativo. Cualquier decisión de inversión debe ser analizada individualmente por el cliente, considerando su situación financiera, fiscal, legal y patrimonial. JUSTECORP S.A. no garantiza rentabilidades futuras. Las posibles vías de residencia están sujetas a la normativa aplicable y a la valoración del caso concreto.</div>
+    </div>
+  </footer>
+</body>
+</html>
